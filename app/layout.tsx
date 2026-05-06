@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   title: "New Reach Nursery — Nature is Therapy",
   description:
     "A family-owned plant nursery in Gampola, Sri Lanka. Every plant we grow carries the intention to bring calm, mindfulness, and green into people's lives.",
+  icons: {
+    icon: "/images/favicon_icon.png",
+    apple: "/images/favicon_icon.png",
+  },
 };
 
 export default function RootLayout({
