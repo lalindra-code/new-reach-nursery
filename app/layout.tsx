@@ -33,7 +33,7 @@ export default function RootLayout({
         }}
       >
         <Header />
-        <main style={{ flex: 1, paddingTop: 64 }}>{children}</main>
+        <main style={{ flex: 1, paddingTop: 72 }}>{children}</main>
         <Footer />
       </body>
     </html>
