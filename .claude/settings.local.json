@@ -6,7 +6,9 @@
       "Bash(npm run *)",
       "Bash(gh auth *)",
       "Bash(where gh *)",
-      "Read(//c/Program Files/**)"
+      "Read(//c/Program Files/**)",
+      "Bash(npx *)",
+      "Bash(claude plugins *)"
     ]
   }
 }
