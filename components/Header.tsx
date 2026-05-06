@@ -10,8 +10,8 @@ export default function Header() {
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: "#FAFCFA",
-        borderBottom: "1px solid #e4ede8",
+        backgroundColor: "#0B3D2E",
+        borderBottom: "1px solid #145A3C",
       }}
     >
       <div
@@ -46,7 +46,7 @@ export default function Header() {
               fontFamily: "Inter, sans-serif",
               fontWeight: 500,
               fontSize: 14,
-              color: "#4A4A4A",
+              color: "#FAFCFA",
               textDecoration: "none",
               letterSpacing: "0.02em",
             }}
@@ -59,7 +59,7 @@ export default function Header() {
               fontFamily: "Inter, sans-serif",
               fontWeight: 500,
               fontSize: 14,
-              color: "#4A4A4A",
+              color: "#FAFCFA",
               textDecoration: "none",
               letterSpacing: "0.02em",
             }}
