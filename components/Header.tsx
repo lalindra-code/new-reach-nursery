@@ -1,73 +1,73 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Header() {
   return (
-    <header
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        backgroundColor: "#0B3D2E",
-        borderBottom: "1px solid #145A3C",
-      }}
-    >
-      <div
+    <>
+      <style>{`
+        .nrn-nav-links { gap: 28px; }
+        @media (max-width: 480px) { .nrn-nav-links { gap: 20px; } }
+      `}</style>
+      <header
         style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          padding: "0 24px",
-          height: 72,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
+          backgroundColor: "#FAFCFA",
+          borderBottom: "1px solid #e4ede8",
         }}
       >
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
-          <Image
-            src="/images/logo.png"
-            alt="New Reach Nursery"
-            width={220}
-            height={55}
-            priority
-            style={{
-              height: "clamp(45px, 5vw, 55px)",
-              width: "auto",
-            }}
-          />
-        </Link>
-
-        <nav style={{ display: "flex", gap: 32, alignItems: "center" }}>
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "0 24px",
+            height: 64,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <Link
             href="/"
             style={{
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 500,
-              fontSize: 14,
-              color: "#FAFCFA",
               textDecoration: "none",
-              letterSpacing: "0.02em",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 700,
+              fontSize: 13,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "#0B3D2E",
             }}
           >
-            Home
+            New Reach Nursery
           </Link>
-          <Link
-            href="/about"
-            style={{
-              fontFamily: "Inter, sans-serif",
-              fontWeight: 500,
-              fontSize: 14,
-              color: "#FAFCFA",
-              textDecoration: "none",
-              letterSpacing: "0.02em",
-            }}
+
+          <nav
+            className="nrn-nav-links"
+            style={{ display: "flex", alignItems: "center" }}
           >
-            About
-          </Link>
-        </nav>
-      </div>
-    </header>
+            {[
+              { href: "/about", label: "About" },
+              { href: "/privacy", label: "Privacy" },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                style={{
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 500,
+                  fontSize: 13,
+                  letterSpacing: "0.04em",
+                  color: "#4A4A4A",
+                  textDecoration: "none",
+                }}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </header>
+    </>
   );
 }
